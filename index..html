@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pethol Zahra - Enak, Segar, Pedas Nendang!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?nasi-pecel');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+  
+    </style>
+ 
+</style>
+
+
+</head>
+<body class="bg-black font-sans">
+
+    <!-- Navbar -->
+    <nav class="BORDER-3 bg-green-800 text-white sticky top-0 z-100">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-text-3xl"></i>
+                <h1 class="text-2xl font-bold">Jajanan Pethol zahra</h1>
+                <p class=" text-purple-400 text-2xl font-bold">"Seribu Selera!"</p>
+            </div>
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="#menu" class="hover:text-yellow-300">Menu</a>
+                <a href="#tentang" class="hover:text-yellow-300">Tentang</a>
+                <a href="#testimoni" class="hover:text-yellow-300">Testimoni</a>
+                <a href="#kontak" class="hover:text-yellow-300">Kontak</a>
+            </div>
+           
+           <!--time-->
+           <div class="bg-green-700 border-lg text-black rounded-full">
+               <p id="time" class="text-1xl font-bold">00:00:00</p>
+               <p id="date" class="text-green">00/00/0000</p></div>
+    
+            <div class="flex items-center gap-4">
+                <button onclick="toggleCart()" class="relative">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="bg-black flex items-center text-white">
+      <div class="container">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          
+            <h2 class="text-5xl md:text-7xl font-bold mb-4">Penthol Zahra Wooouuww di Kediri!</h2>
+            <p class="text-xl md:text-2xl mb-8">Daging Super segar • Sambel pedas nendang . Lidah Bergoyang</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class=" border-2 border-light-subtle hover:bg-green-700 text-white-50 font-bold px-10 py-4 rounded-full text-xl transition">
+                    Pesan Sekarang
+                </a>
+                <a href="https://wa.me/6285730032110" target="_blank" class="border-2 border-green-400 btn hover:bg-green-700 hover:text-white font-bold px-10 py-4 rounded-full text-xl transition">
+                    <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                </a></div>
+                <p class="hover:text-2xl md:4xl mb-8 text-green-300"> jaNGan keTIngGAlan</p>
+            <p class="mt-10 text-sm">Penghataran 0.5km &amp; sekitarnya • Buka 08:00 - 20:00</p>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-20 bg-secondary-subtle">
+        <div class="mx-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Jajanan Pethol Favoritmu</h2>
+
+            <div class="grid md:grid-cols-3 gap-8" id="menu-grid">
+                <div class="bg-green"></div>
+                <!-- Menu items akan di-generate via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="py-20 bg-green-50">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzsB80vEgJ7PGEOdqb7o1EgZEMWi4cjP91E5YbGZRPa5Q7jMoij-ePa9rH_WlhaO1-QqvZRj7g9BnewZnPsUEA35A1mqWX3sPzxPcJbOhDWNgRRCYN4HVeig3lhIJqKufpCZQO=s1360-w1360-h1020-rw" alt="Nasi Pecel" class="rounded-2xl shadow-xl">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-6">kATAKAN TENTAng pENthol Zahra!?</h2>
+                <ul class="space-y-6 text-lg">
+                    <li class="flex gap-4">
+                        <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                        <div>
+                            <strong>Bahan segar setiap hari</strong><br>
+                            Daging diambil pagi hari dari pasar lokal
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                        <div>
+                            <strong>Bumbu kacang spesial</strong><br>
+                            Resep turun-temurun dari Buyut Pak SUMARI
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                        <div>
+                            <strong>Harga murah, porsi melimpah</strong><br>
+                            Daging + sayur + telur + kerupuk + sambel
+                        </div>
+                    </li>
+                </ul>
+                <button onclick="window.location.href='#kontak'" class="mt-8 bg-green-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-800">
+                    Mau Pesan? Klik sini
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section id="testimoni" class="py-20 bg-white-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Apa Kata Pelanggan?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <p class="italic">"Dagingnya enak banget! Bumbu kacangnya kental dan pedasnya pas. Tiap minggu pasti pesan."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-orange-300 rounded-full"></div>
+                        <div>
+                            <strong>Aisyah - Tulung rejo</strong>
+                            <div class="text-yellow-500">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <p class="italic">"Delivery cepat, Baksony masih anget. Porsi lumanyan, cocok banget  kapan saja."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-300 rounded-full"></div>
+                        <div>
+                            <strong>Ahmad - Duluran</strong>
+                            <div class="text-yellow-500">★★★★☆</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <p class="italic">"Anak-anak suka banget! Petholnya kenyal"</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-purple-300 rounded-full"></div>
+                        <div>
+                            <strong>Fatimah - Apalagi kalau hujan2, waah manteeep banget nggayemi penthol</strong>
+                            <div class="text-yellow-500">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Kontak -->
+    <footer id="kontak" class="bg-green-700 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Penthol mANTAP zAHRA</h3>
+                    <p class="text-green-200">bAKSO Penthol autentik Jawa Timur dengan sentuhan seriBu sELERA.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Hubungi Kami</h4>
+                    <a href="https://wa.me/60123456789" target="_blank" class="flex items-center gap-2 hover:text-yellow-300 mb-2">
+                        <i class="fab fa-whatsapp"></i> +60 12-345 6789
+                    </a>
+                    <p class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt"></i> Kediri, Jawa Timur, Indonesia
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Jam Operasional</h4>
+                    <p>Senin - Minggu</p>
+                    <p>08:00 - 20:00 WIB</p>
+                    <p>mELyanI pESAnaN</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Ikuti Kami</h4>
+                    <div class="flex gap-4 text-2xl">
+                        <a href="#" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-yellow-300"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-16 pt-8 border-t border-green-700">
+                <p>© 2026 Penthol zahra• Dibuat dengan ❤️ untuk pecinta Penthol</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center">
+        <div class="bg-purple-200 rounded-3xl max-w-lg w-full mx-4 max-h-[90vh] overflow-hidden">
+            <div class="p-6 border-b">
+           <button onclick="toggleCart()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <h3 class="text-2xl font-bold">Keranjang Pesanan</h3>
+            </div>
+            <div id="cart-items" class="p-6 overflow-auto" style="max-height: 60vh;">
+                <!-- Items diisi via JS -->
+            </div>
+            <div class="p-md-5 border-t">
+                <div class="flex justify-between text-xl font-bold mb-5">
+                    <span>Total</span>
+                    <div id="cart-total"></div></span>
+                <button onclick="checkout()" class=" btn text-white-50 bg-green-700 hover:bg-green-800 py-lg-1 rounded-xl text-white text-mb-3 transition">
+                    Pesan via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+  // Update clock every second
+  function updateClock() {
+    const now = new Date();
+    document.getElementById('time').textContent = now.toLocaleTimeString();
+    document.getElementById('date').textContent = now.toLocaleDateString();
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // Initial call
+</script>
+
+
+</script>
+
+    <script>
+        // Menu Data
+        const menu = [
+            {
+                id: 1,
+                name: "Bakso Mantap",
+                price: 8000,
+                desc: "Penthol,kuah, sambel",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV1sZR5QIlLmfKVa042z6TnzoFnXj0n5s9X_hPPyNwxg&s"
+            },
+             {
+                id: 2,
+                name: "Nasi Pecel + telur",
+                price: 9000,
+                desc: "Nasi, pecel, sambal,sayur,krupuk,telur",
+                img: "https://i.pinimg.com/736x/4f/47/86/4f4786052d8ce7925105a3c7e094b40c.jpg"
+            },
+             {
+                id: 3,
+                name: "Bakso segar",
+                price: 7000,
+                desc: "Penthol + mie favorit",
+                img: "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/eef510fc-48d8-4f5a-8159-a7e8ec059049_Go-Biz_20200820_120443.jpeg"
+            },
+             {
+                id: 4,
+                name: "Bakso belah",
+                price: 10000,
+                desc: "Penthol, sayur, sambal ",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeUIj7TH6ao4VjtjCzKt2l52NwwLtBpC5wmdHos1-jJdJerJyIciKnDkA&s"
+            },
+             {
+                id: 5,
+                name: "Bakso Beranak",
+                price: 11000,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/b7e63dc9-51f0-4344-bce6-9b2c44be4d8a_menu-item-image_1644300546795.jpg"
+            },
+             {
+                id: 6,
+                name: "pENTHOL gORENG",
+                price: 5000,
+                desc: "Daging, sayur",
+                img: "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0b17de05-4dd2-40b1-bc6e-96a54c7799a0_Go-Biz_20220123_082155.jpeg"
+            },
+             {
+                id: 7,
+                name: "Nasi Pecel Komplit + Es Cincau",
+                price: 14,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?grass-jelly"
+            },
+             {
+                id: 8,
+                name: "Nasi Pecel Komplit + Es Campur",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?es-campur"
+            },
+             {
+                id: 9,
+                name: "Nasi Pecel Komplit + Es Kacang Merah",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?red-bean-ice"
+            },
+             {
+                id: 10,
+                name: "Nasi Pecel Komplit + Es Doger",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?es-doger"
+            },
+             {
+                id: 11,
+                name: "Nasi Pecel Komplit + Es Teler",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?es-teler"
+            },
+             {
+                id: 12,
+                name: "Nasi Pecel Komplit + Es Kopyor",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?es-kopyor"
+            },
+             {
+                id: 13,
+                name: "Nasi Pecel Komplit + Es Cendol",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?es-cendol"
+            },
+             {
+                id: 14,
+                name: "Nasi Pecel Komplit + Es Kelapa Muda",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?young-coconut-ice"
+            },
+             {
+                id: 15,
+                name: "Nasi Pecel Komplit + Es Milo",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?milo-ice"
+            },
+             {
+                id: 16,
+                name: "Nasi Pecel Komplit + Es Kopi",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?iced-coffee"
+            },
+             {
+                id: 17,
+                name: "Nasi Pecel Komplit + Es Susu",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?milk-ice"
+            },
+             {
+                id: 18,
+                name: "Nasi Pecel Komplit + Es Coklat",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?chocolate-ice"
+            },
+             {
+                id: 19,
+                name: "Nasi Pecel Komplit + Es Durian",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?durian-ice"
+            },
+             {
+                id: 20,
+                name: "Nasi Pecel Komplit + Es Alpukat",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?avocado-ice"
+            },
+             {
+                id: 21,
+                name: "Nasi Pecel Komplit + Es Mangga",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?mango-ice"
+            },
+             {
+                id: 22,
+                name: "Nasi Pecel Komplit + Es Strawberry",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?strawberry-ice"
+            },
+             {
+                id: 23,
+                name: "Nasi Pecel Komplit + Es Blueberry",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?blueberry-ice"
+            },
+             { 
+                 id: 24,
+                name: "Nasi Pecel Komplit + Es Raspberry",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?raspberry-ice"
+            },
+             {
+                id: 25,
+                name: "Nasi Pecel Komplit + Es Lemon",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?lemon-ice"
+            },
+            {
+                id: 26,
+                name: "Nasi Pecel Komplit + Es Lime",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?lime-ice"
+            },
+            {
+                id: 27,
+                name: "Nasi Pecel Komplit + Es Jeruk Nipis",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?lime-ice"
+            },
+             {
+                id: 28,
+                name: "Nasi Pecel Komplit + Es Teh Tarik",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?teh-tarik-ice"
+            },
+             {
+                id: 29,
+                name: "Nasi Pecel Komplit + Es Teh Hijau",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?green-tea-ice"
+            },
+             {
+                id: 30,
+                name: "Nasi Pecel Komplit + Es Teh Melati",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?jasmine-tea-ice"
+            },
+             {
+                id: 31,
+                name: "Nasi Pecel Komplit + Es Teh Rosella",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?roselle-tea-ice"
+            },
+             {
+                id: 32,
+                name: "Nasi Pecel Komplit + Es Teh Chamomile",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?chamomile-tea-ice"
+            },
+             {
+                id: 33,
+                name: "Nasi Pecel Komplit + Es Teh Earl Grey",
+                price: 15,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?earl-grey-tea-ice"
+            },
+             {
+                id: 34,
+                name: " Es Teh Oolong",
+                price: 7000,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?oolong-tea-ice"
+            },
+             {
+                id: 35,
+                name: " Es Teh Pu-erh",
+                price: 7000,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?pu-erh-tea-ice"
+            },
+             {
+                id: 36,
+                name: " Es Teh Jasmine Green",
+                price: 8000,
+                desc: "Paket hemat dengan minuman segar",
+                img: "https://source.unsplash.com/400x300/?jasmine-green-tea-ice"
+            }
+        ];
+
+        let cart = [];
+
+        // Render Menu
+        function renderMenu() {
+            const container = document.getElementById('menu-grid');
+            container.innerHTML = '';
+            
+            menu.forEach(item => {
+                const card = `
+                <div class="bg-purple-100 border rounded-3xl overflow-hidden card-hover transition">
+                    <img src="${item.img}" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">${item.name}</h3>
+                        <p class="text-gray-600 text-sm mt-1">${item.desc}</p>
+                        <div class="flex justify-between items-center mt-6">
+                            <span class="text-2xl font-bold text-green-700">Rp ${item.price}</span>
+                            <button onclick="addToCart(${item.id})" class="bg-green-700 text-white px-6 py-3 rounded-2xl hover:bg-green-800">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+                container.innerHTML += card;
+            });
+        }
+
+       
+
+        function addToCart(id) {
+            const item = menu.find(m => m.id === id);
+            cart.push({...item});
+            updateCartCount();
+            
+            // Toast notification
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-4 right-4 bg-green-700 text-white px-6 py-3 rounded-2xl shadow-xl";
+            toast.textContent = `${item.name} ditambahkan!`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+        }
+
+        function updateCartCount() {
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('hidden');
+            renderCart();
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-items');
+            container.innerHTML = '';
+            
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-center text-gray-500 py-12">Keranjang kosong</p>`;
+                document.getElementById('cart-total').textContent = 'Rp 0';
+                return;
+            }
+
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                total += item.price;
+                const div = document.createElement('div');
+                div.className = "flex gap-4 mb-6";
+                div.innerHTML = `
+                    <img src="${item.img}" class="w-20 h-20 object-cover rounded-xl">
+                    <div class="flex-1">
+                        <h4 class="font-semibold">${item.name}</h4>
+                        <p class="text-sm text-gray-500">${item.desc}</p>
+                        <p class="font-bold mt-1">Rp ${item.price}</p>
+                    </div>
+                    <button onclick="removeFromCart(${index})" class="text-red-500">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                container.appendChild(div);
+            });
+            
+            document.getElementById('cart-total').textContent = `Rp ${total}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            renderCart();
+            updateCartCount();
+        }
+
+        function checkout() {
+            if (cart.length === 0) return;
+            
+            let message = "Halo penthol zahra, saya mau pesan:\n\n";
+            cart.forEach(item => {
+                message += `• ${item.name} - Rp ${item.price}\n`;
+            });
+            message += `\nTotal: Rp ${cart.reduce((a, b) => a + b.price, 0)}\n\nTerima kasih!`;
+            
+            const waUrl = `https://wa.me/628573002110?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        // Initialize
+        window.onload = function() {
+            renderMenu();
+        };
+    </script>
+</body>
+</html>
